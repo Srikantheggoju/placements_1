@@ -1,0 +1,54 @@
+@model newcsa.Models.Student
+<html>
+
+    <head></head>
+
+    <body>
+        <div>
+        <form method="post">
+            <div>
+                @Html.Label("enter student id")
+                @Html.TextBoxFor((x => x.StdId), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter name")
+                @Html.TextBoxFor((x => x.Name), new {@required="required"})
+            </div>
+
+             <div>
+                @Html.Label("enter password")
+                @Html.TextBoxFor((x =>x.Password), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter marks")
+                @Html.TextBoxFor((x =>x.Marks), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter branch")
+                @Html.TextBoxFor((x =>x.Branch), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter gender")
+                @Html.TextBoxFor((x =>x.Gender), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter email")
+                @Html.TextBoxFor((x =>x.Email), new {@required="required"})
+            </div>
+
+            <div>
+                @Html.Label("enter year of passing")
+                @Html.TextBoxFor((x =>x.YOP), new {@required="required"})
+            </div>
+
+            <input type="submit" value="Submit"/>
+        </form>
+        </div>
+       <div><h1>@ViewData["exp"]</h1></div>
+    </body>
+</html>
